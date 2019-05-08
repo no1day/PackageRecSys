@@ -69,7 +69,7 @@
         <div class="col-auto d-none d-lg-block">
           <div class="col-sm-6 col-md-3" style="margin:13% 0">
           <a href="#" class="thumbnail">
-            <img src="Style/images/d1.jpg" alt="">
+            <img src="Style/images/add.png" width="220" height="220" alt="">
           </a>
     	  </div>
     	  <div class="" style="margin:10%">
