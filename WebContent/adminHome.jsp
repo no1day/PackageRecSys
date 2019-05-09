@@ -38,7 +38,7 @@
 </header>
 <div class="container">
 	
-	
+
 	<!-- 上传菜品 -->
 	<div class="row mb-4" style="margin:100px 0">
     <div class="col-md-8">
@@ -76,40 +76,32 @@
           	<button class="btn btn-primary btn-lg btn-block" type="submit">上传</button>
     	  </div>
         </div>
-        
       </div>
     </div>
   </div>
 
+	<div class="row">
+			<div>
+				<h4><b>菜品订购量</b></h4>
+			</div>
+			<p></p>
+			<div class="row">
+				<iframe name="myFrame" action="adminDishList.jsp" height="400px" width="80%" frameborder="no" border="0"marginwidth="0" marginheight="0" scrolling="no"allowtransparency="yes"></iframe>
+	        </div> 
+		</div>
+		<div class="row">
+			<div>
+				<h4><b>套餐订购量</b></h4>
+			</div>
+			<p></p>
+			<div class="row">
+				<iframe name="myFrame" action="adminPacList.jsp" height="400px" width="80%" frameborder="no" border="0"marginwidth="0" marginheight="0" scrolling="no"allowtransparency="yes"></iframe>
+	        </div> 
+		</div>
 
-    <!-- 菜品订购情况 -->
-	<div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>菜名</th>
-              <th>类型</th>
-              <th>价格</th>
-              <th>订购量</th>
-            </tr>
-          </thead>
-       </table>
-    </div>
     
-    <!-- 套餐订购情况 -->
-	<div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>套餐名</th>
-              <th>套餐类型</th>
-              <th>菜品数量</th>
-              <th>价格</th>
-              <th>订购量</th>
-            </tr>
-          </thead>
-       </table>
-    </div>
+    
+    
 </div>
 </body>
 </html>
