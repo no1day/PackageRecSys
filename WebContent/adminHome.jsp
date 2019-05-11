@@ -38,47 +38,53 @@
 </header>
 <div class="container">
 	
-
 	<!-- 上传菜品 -->
-	<div class="row mb-4" style="margin:100px 0">
-    <div class="col-md-8">
-      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-4 text-primary">菜品上传</strong>
-          
-          <p class="card-text">菜品名称：</p>
-          <div class="form-label-group">
-    	  	<input type="text" id="inputname" class="form-control" placeholder="菜名" required autofocus>
-  		  </div>
-  		  <p class="card-text">菜品类型：</p>
-		  <div class="form-label-group">
-            <select class="custom-select d-block w-250" id="country" required>
-              <option value="">请选择...</option>
-              <option>禽肉类</option>
-            </select>
-          </div>
-          <p class="card-text">菜品价格：</p>
-		  <div class="form-label-group">
-		    <input type="text" id="inputprice" class="form-control" placeholder="价格" required>
-		  </div>
-		  <p class="card-text">菜品介绍：</p>
-		  <div class="form-group">
-    		<textarea class="form-control" rows="3"></textarea>
-  		  </div>
-        </div>
-        <div class="col-auto d-none d-lg-block">
-          <div class="col-sm-6 col-md-3" style="margin:13% 0">
-          <a href="#" class="thumbnail">
-            <img src="Style/images/add.png" width="220" height="220" alt="">
-          </a>
-    	  </div>
-    	  <div class="" style="margin:10%">
-          	<button class="btn btn-primary btn-lg btn-block" type="submit">上传</button>
-    	  </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<form action = "/PackageRecSys/AdminController?op=1" method="post">
+		<div class="row mb-4" style="margin:100px 0">
+	    <div class="col-md-8">
+	      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+	        <div class="col p-4 d-flex flex-column position-static">
+	          <strong class="d-inline-block mb-4 text-primary">菜品上传</strong>
+	          
+	          <p class="card-text">菜品名称：</p>
+	          <div class="form-label-group">
+	    	  	<input type="text" name="name" class="form-control" placeholder="菜名" required>
+	  		  </div>
+	  		  <p class="card-text">菜品类型：</p>
+			  <div class="form-label-group">
+	            <select class="custom-select d-block w-250" name="type" required>
+	              <option value="">请选择...</option>
+	              <option>禽肉类</option>
+	              <option>eee</option>
+	            </select>
+	          </div>
+	          <p class="card-text">菜品主料：</p>
+			  <div class="form-label-group">
+			    <input type="text" name="food_material" class="form-control" placeholder="价格" required>
+			  </div>
+	          <p class="card-text">菜品价格：</p>
+			  <div class="form-label-group">
+			    <input type="text" name="price" class="form-control" placeholder="价格" required>
+			  </div>
+			  <p class="card-text">菜品介绍：</p>
+			  <div class="form-group">
+	    		<textarea class="form-control" name="description" rows="3"></textarea>
+	  		  </div>
+	        </div>
+	        <div class="col-auto d-none d-lg-block">
+	          <div class="col-sm-6 col-md-3" style="margin:13% 0">
+	          <a href="#" class="thumbnail">
+	            <img src="Style/images/add.png" width="220" height="220" alt="">
+	          </a>
+	    	  </div>
+	    	  <div class="" style="margin:10%">
+	          	<button class="btn btn-primary btn-lg btn-block" type="submit">上传</button>
+	    	  </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+  </form>
 
 	<div class="row">
 			<div>
