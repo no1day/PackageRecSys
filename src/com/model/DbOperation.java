@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.*;
 
 import com.entity.Administrator;
+import com.entity.Combo;
 import com.entity.Dish;
 
 public class DbOperation {
@@ -91,5 +92,74 @@ public class DbOperation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	//所有菜品订购情况
+	public Set<Dish> searchDishes()
+	{
+		try {		
+	    	Statement stat=null;
+		    ResultSet rs=null;
+			stat=conn.createStatement();
+			Set<Dish> sts= new HashSet<Dish>();
+	    	rs=stat.executeQuery("select * from dish"); 
+
+	    	while(rs.next())
+	        {
+	    		Dish dish = new Dish();
+	        	dish.setdid(rs.getInt("id"));
+	        	dish.setdname(rs.getString("name"));
+	        	dish.setdtype(rs.getString("type"));
+	        	dish.setdprice(rs.getInt("price"));
+	        	dish.setcount(rs.getInt("count"));
+	        	sts.add(dish);
+	        }
+		    if(rs!=null){
+		    	  rs.close();
+		       }
+			if(stat!=null){
+		    	   stat.close();
+		    }
+
+			return sts ;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	//固定套餐订购情况
+	public Set<Combo> searchCombo()
+	{
+		try {		
+		    Statement stat=null;
+		    ResultSet rs=null;
+			stat=conn.createStatement();
+			Set<Combo> set= new HashSet<Combo>();
+		    rs=stat.executeQuery("select * from combo"); 
+
+		    while(rs.next())
+		    {
+		    	Combo combo = new Combo();
+		    	combo.setcid(rs.getInt("id"));
+		    	combo.setcname(rs.getString("name"));
+		    	combo.setctype(rs.getString("type"));
+		    	combo.setcprice(rs.getInt("price_total"));
+		    	combo.setcount(rs.getInt("count"));
+		    	set.add(combo);
+		    }
+			if(rs!=null){
+			    rs.close();
+			}
+			if(stat!=null){
+			    stat.close();
+			}
+			return set;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

@@ -16,6 +16,8 @@ public class Order {
 	
 	private Date time;
 	
+	private String type;
+	
 	public Integer getoid() {
 		return oid;
 	}
@@ -62,5 +64,13 @@ public class Order {
 	
 	private void settime(Date time) {
 		this.time = time;
+	}
+	
+	public String gettype() {
+		return type;
+	}
+	
+	public void setttype(String type) {
+		this.type = type;
 	}
 }

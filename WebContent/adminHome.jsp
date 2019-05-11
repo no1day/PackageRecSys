@@ -19,14 +19,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">上传菜品 <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+        	<form action = "/PackageRecSys/AdminController?op=2" method="post">
+				<input class="" type="submit" value="菜品订购情况">
+			</form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">菜品订购情况</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">套餐订购情况</a>
+            <form action = "/PackageRecSys/AdminController?op=3" method="post">
+				<input class="" type="submit" value="套餐订购情况">
+			</form>
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0">
@@ -85,28 +86,9 @@
 	    </div>
 	  </div>
   </form>
+  
+  <!-- 上传套餐 -->
 
-	<div class="row">
-			<div>
-				<h4><b>菜品订购量</b></h4>
-			</div>
-			<p></p>
-			<div class="row">
-				<iframe name="myFrame" action="adminDishList.jsp" height="400px" width="80%" frameborder="no" border="0"marginwidth="0" marginheight="0" scrolling="no"allowtransparency="yes"></iframe>
-	        </div> 
-		</div>
-		<div class="row">
-			<div>
-				<h4><b>套餐订购量</b></h4>
-			</div>
-			<p></p>
-			<div class="row">
-				<iframe name="myFrame" action="adminPacList.jsp" height="400px" width="80%" frameborder="no" border="0"marginwidth="0" marginheight="0" scrolling="no"allowtransparency="yes"></iframe>
-	        </div> 
-		</div>
-
-    
-    
     
 </div>
 </body>
